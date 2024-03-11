@@ -1,0 +1,1176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>ELITE-ECO</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    
+    
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #4CAF50;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    /* align-items: center; */
+    padding: 10px 20px;
+}
+
+.nav-links , .nav{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li ,.footer li{
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.nav-links li a ,.footer li a{
+    font-size:20px ;
+    color: #fff;
+    font-weight: bold; 
+    padding: 5px;
+}
+
+.nav-links li :hover  {
+    text-decoration: none;
+    border: 3px solid orangered;
+    color: rgb(242, 233, 215);
+    margin-right: -3px;
+    margin-left: -3px;
+}
+
+.footer li:hover{
+  text-decoration: none;
+    border: 3px solid orangered;
+    color: rgb(242, 233, 215);
+    margin-right: 14px;
+    margin-bottom: -6px;
+}
+
+
+.logo-m {
+    color: #fff;
+    text-decoration: none !important;
+    font-size: 36px;
+    font-weight: bold;
+    user-select: none;
+    font-family: "Oswald", sans-serif;
+}
+.tagline-section {
+    background-image: url("banner2.jpg") ;
+    background-repeat:initial;
+    background-size: cover;
+    background-color: #96ec96;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.tagline-container {
+    
+    max-width: 100%;
+   
+    height: 60vh;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.tagline-text {
+    max-width: 50%;
+    text-align: center;
+}
+
+.tagline-text h2 {
+    font-size: 46px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.brands-section {
+    background-color: #fff;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+
+.brand {
+    width: 150px;
+    height: 150px;
+    margin: 4rem;
+    border-radius: 50%;
+    box-shadow: 4px 4px 4px 4px #6d6d6d;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.brand img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    transition: transform 0.3s ease-in-out;
+}
+
+.brand:hover {
+    transform: scale(1.1);
+}
+
+.brand-title{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 56px;
+    font-weight: 400;
+}
+
+.tagline {
+    margin-top: 20px;
+    font-style: italic;
+    color: #666;
+    font-size: 2em;
+    font-family: Apple Chancery, cursive;
+    text-align: center;
+}
+
+/* ------------------------------------------------------------------------------Carousel css */
+
+ /* Customize the appearance of the carousel controls */
+ .carousel-control-prev, .carousel-control-next {
+      width: 5%;
+      font-size: 2em;
+      background: rgba(0, 0, 0, 0.3);
+      color: #fff;
+      border: none;
+    }
+    .carousel-control-prev-icon, .carousel-control-next-icon {
+      background-color: #000;
+    }
+
+    /* Make the carousel take 100% of the viewport height */
+    .carousel-inner img{
+        height: 80vh;
+    }
+
+    /* Center align text and button */
+    .carousel-caption {
+      text-align: center;
+    }
+    .carousel-caption button {
+      margin-top: 15px;
+    }
+
+    .carousel-inner h5{
+      display: inline;
+      font-size: 3rem;
+      color: black;
+      background-color: rgba(255, 255, 255, 0.3);
+      padding: 10px;
+      margin: 20px;
+      
+    }
+
+    .carousel-inner h5+p{
+      font-size: 2rem;
+      color: black;
+      background-color: rgba(255, 255, 255, 0.3);
+      padding: 10px;
+      margin: 20px;
+    }
+
+    /* --------------------------cycle svg */
+
+    .cycle-riding{
+      background-color: rgb(14, 168, 78);
+      height: 70px;
+      border:1px solid black;
+      border-width: 1px 0 1px 0;
+      margin: 5px 0 5px 0;
+    }
+
+
+    .cycle-riding img{
+      height: 70px;
+      animation: cycle 5s linear forwards ;
+    }
+
+    @keyframes cycle {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(1800px);
+    }
+}
+    .cycle-riding p{
+      font-size: 3rem;
+      font-style: italic;
+      font-weight: 500;
+      color: rgb(255, 255, 255);
+      position: relative;
+      bottom: 70px;
+      left: 50px;
+      opacity: 0;
+      animation: text-appear 6s ease-in forwards;
+    }
+
+    @keyframes text-appear{
+      99%{
+        opacity: 0;
+      }
+      100%{
+        opacity: 1;
+      }
+    }
+
+    /* ------------------------------------- 2nd section */
+
+    .second-section{
+      min-height: 100%;
+      height: 600vh;
+      /* width: 100vw; */
+      background-image: url(./images/Extra_images/nature1.jpg);
+      background-attachment: scroll;
+      /* overflow: hidden; */
+      /* margin-top: 40px; */
+    }
+
+    .third-section{
+      min-height: 100%;
+      height: 100vh;
+      background-image: url(./images/Extra_images/nature2.jpg);
+      background-size: cover;
+      /* overflow: hidden; */
+    }
+
+
+
+    .second-section .why-main,.what-main{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .why-main{
+      margin-top: 30px;
+      }
+
+    .why-main .why , .what-main .what , .accordion-head,.product-heading{
+      color: white;
+      font-size: 3rem;
+      background-color: #2b2a2a;
+      padding: 0.5rem;
+      margin-top: 10rem;
+      border-radius: 13px;
+    }
+
+    .accordion-head{
+      margin-bottom: 30px;
+    }
+
+    .why-main .why-ans , .what-main .what-ans{
+      margin-top: 2rem;
+      color: white;
+      font-size: 26px;
+      background-color: rgba(87, 83, 83, 0.878);
+      border-radius: 10px;
+    }
+
+
+
+
+    .quote{
+      margin-top: 80px;
+      background-color: rgba(0, 100, 0, 0.808);
+      color: whitesmoke;
+      font-size: 3rem;
+      font-style: italic;
+      border-radius: 15px;
+    }
+    .quote span{
+      position: relative;
+      left: 600px;
+      color: rgb(205, 182, 138);
+    }
+    /* .second-section .why{
+      font-size: 3rem;
+      height: 40px;
+      display: inline;
+      text-align: center;
+      background-color: #2b2a2a;
+      color: white;
+      position: relative;
+      left: 33rem;
+      top: 16rem;
+      padding: 20px;
+      border: 1px solid whitesmoke;
+    }
+
+    .why-ans{
+      position: relative;
+      color: white;
+    } */
+
+
+    /* ------------------------------------accordion */
+
+    .sections{
+            width: 90vw;
+            justify-self: center;
+            background: rgba(255, 255, 255,0.6);
+            border-radius: 10px;
+        }
+        .container-main{
+          margin-top: 100px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+        .accordion .accordion-item .accordion-button{
+            background-color: rgba(255, 255, 255,0.8);
+            border-radius: 20px;
+        }
+
+        .accordion .accordion-item .accordion-button .sections{
+            background-color: transparent;
+            border-radius: 20px;
+        }
+
+        .accordion .accordion-item .accordion-button h1{
+            background-color:   #40A2E3 ;
+            /* text-decoration: underline; */
+            border-radius: 10px;
+            padding: 10px;
+        }
+
+        .accordion .accordion-item .accordion-button h1 img{
+            margin-left: 20px;
+            margin-bottom: 11px;
+            height: 40px;
+        }
+
+        .accordion .accordion-item .accordion-button p{
+            background-color: #33333337;
+            border-radius: 10px;
+            padding: 10px;
+        }
+
+        .accordion-button:hover{
+            background-color: rgba(110, 104, 104, 0.596) !important;
+            scale: 1.02 ;
+        }
+        .accordion-button:hover p{
+            color: white;
+        }
+    
+        .post{
+            display: flex;
+            flex : 1,2;
+            gap:20px;
+            justify-content: space-evenly;
+        }
+        .ima img{
+            height: 200px;
+            width: 200px;
+        }
+        #sp1{
+            height: 190px;
+            width: 300px;
+            border-radius: 5px;
+        }
+        .content{
+            margin: 10px;
+        }
+        .liste> li,h5{
+            display: inline;
+            padding-left: 10px;
+        }
+
+        .view-more{
+          /* color: white; */
+          font-size: 26px;
+          font-weight: 500;
+          height: 40px;
+          margin-top: 20px;
+          background-color: rgba(255, 250, 250, 0.627);
+          /* padding-bottom: 8px; */
+          padding: 0 5px 8px 5px;
+        }
+
+        .view-more a{
+          font-weight: 700;
+          text-decoration: none;
+          color: rgb(0, 0, 0);
+        }
+
+        .view-more a:hover{
+          text-decoration: underline;
+          color: rgb(75, 51, 51);
+        }
+
+        /* ---------------------------------------------------------product */
+
+        .products .card {
+        margin: 1em;
+        /* height: max-content; */
+      }
+      .products .card:hover {
+        scale: 1.03;
+      }
+
+      .products {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+      }
+      .card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        min-width: 400px;
+        min-height: 600px;
+        /* height: 500px; */
+        /* margin: auto; */
+        text-align: center;
+        font-family: arial;
+      }
+      .card a {
+        color: #217a24ed;
+        text-decoration: none;
+      }
+
+      .card button {
+        border: none;
+        outline: 0;
+        padding: 12px;
+        color: white;
+        background-color: #000;
+        text-align: center;
+        cursor: pointer;
+        width: 100%;
+        font-size: 18px;
+      }
+
+      .explore-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .explore-btn button{
+        scale: 1.4;
+      }
+      .product-cards  div {
+        /* border: 2px solid black; */
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+      }
+      .card button:hover {
+        opacity: 0.7;
+      }
+      .coupon_code {
+        display: none;
+      }
+
+
+      /* --------------------------------------------news */
+    .news-list{
+        display: inline-flex;
+    }
+    main {
+        padding: 20px;
+    }
+
+    .news-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .news {
+        width: 300px;
+        padding: 20px;
+        margin-bottom: 20px;
+        border-radius: 10px;
+        background-color: #fff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+        transition: transform 0.3s ease; /* Smooth transition */
+        display: none;
+    }
+    .news:nth-child(1),
+    .news:nth-child(2),
+    .news:nth-child(3),
+    .news:nth-child(4){
+        display: inline-block;
+    }
+    .news:hover {
+        transform: translateY(-5px); /* Move up slightly on hover */
+    }
+
+    .news img {
+        object-fit: contain;
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    .news h2 {
+        margin-top: 10px;
+        font-size: 20px;
+        color: #333; /* Darker text color */
+    }
+
+    .news span {
+        font-size: 18px;
+        font-weight: bold;
+        color: #e67e22; /* Orange price */
+    }
+
+    .news button {
+        background-color: #3498db; /* Blue button */
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease; /* Smooth color transition */
+    }
+
+    .news button:hover {
+        background-color: #2980b9; /* Darker blue on hover */
+    }
+
+    #load-more-btn {
+        background-color: #3498db; /* Blue button */
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease; /* Smooth color transition */
+    }
+    
+    #load-more-btn:hover {
+        background-color: #2980b9; /* Darker blue on hover */
+    }
+    #load-more{
+        margin-left: 55rem;
+        justify-content: center;
+        margin-top:20px;
+        display: inline-block;
+        padding: 5px 30px;
+        /* border:1px solid #334; */
+        color: #334;
+        font-size: 16px;
+        cursor: pointer;
+        scale: 1.4;
+    }
+
+    #load-more:hover{
+        color:#fff;
+    }
+
+
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+          <span href="#" class="logo-m">Elite Eco</span>
+          <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="./Extra_files/Product_main.html" target="_blank">Shop</a></li>
+            <li><a href="./Extra_files/About.html" target="_blank">About Us</a></li>
+            <li><a href="./Extra_files/Contact_us.html"target="_blank">Contact</a></li>
+          </ul>
+      </nav>
+    </header>
+
+
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="./images/Carousel_images/wind_mill.jpg" class="d-block w-100" alt="First Slide">
+          <div class="carousel-caption">
+            <h5>Renewable Energy</h5>
+            <p>Explore the benefits of renewable energy sources and their impact on the environment.</p>
+            <!-- <button class="btn btn-primary">Click Here</button> -->
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="./images/Carousel_images/electric_car.jpg" class="d-block w-100" alt="Second Slide">
+          <div class="carousel-caption">
+            <h5 style="background-color: #000; color: white;">Sustainable Transportation</h5>
+            <p style="background-color: #000; color: white;">Discover eco-friendly transportation options to reduce your carbon footprint.</p>
+            <!-- <button class="btn btn-primary">Click Here</button> -->
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="./images/Carousel_images/water_conservation_main.jpg" class="d-block w-100" alt="Third Slide">
+          <div class="carousel-caption">
+            <h5 style="background-color: #000; color: white;">Water Conservation</h5>
+            <p style="background-color: #000; color: white;">Learn simple yet effective ways to conserve water at home and in your community.</p>
+            <!-- <button class="btn btn-primary">Click Here</button> -->
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="./images/Carousel_images/community_garden.jpg" class="d-block w-100" alt="Fourth Slide">
+          <div class="carousel-caption">
+            <h5 style="background-color: #000; color: white;">Community Gardens</h5>
+            <p style="background-color: #000; color: white;">Get involved in community gardening projects to promote local and sustainable food sources.</p>
+            <!-- <button class="btn btn-primary">Click Here</button> -->
+          </div>
+        </div>
+      </div>
+      <!-- <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only"></span>
+      </a>
+      <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only"></span>
+      </a> -->
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+    <script>
+      // Activate the carousel with a 4-second interval
+      $('#myCarousel').carousel({
+        interval: 3000,
+        pause: false
+      });
+    </script>
+
+    <!-- -------------------------------------------------------------------------------------------------- -->
+
+    <div class="cycle-riding">
+      <img src="./images/Extra_images/cycle_riding.svg" alt="">
+      <p>"Take a step forward towards a better and a protected future"</p>
+    </div>
+
+    <!-- -------------------------------------------------------------------------------------------------- -->
+
+
+    <div class="second-section">
+
+      <div class="what-main">
+        <div class="what">
+          <span>What do we mean by Sustainable Solutions ?</span>
+        </div>
+        <div class="container what-ans">
+          <p > <strong style="font-size: 34px; font-weight: 300;">Sustainable</strong> solutions refer to practices, strategies, technologies, and approaches that aim to meet the needs of the present without compromising the ability of future generations to meet their own needs. These solutions address environmental, social, and economic challenges, promoting long-term well-being and minimizing negative impacts on the planet and its resources. Examples include renewable energy sources, eco-friendly technologies, waste reduction initiatives, and socially responsible business practices.</p>
+          
+        </div>
+      </div>
+
+
+
+
+      <div class=" why-main">
+        <div class="why">
+          <span>Why do we need Sustainable Solutions ?</span>
+        </div>
+        <div class="container why-ans">
+          <p > <strong style="font-size: 34px; font-weight: 300;">Sustainable</strong> solutions are essential for several reasons, encompassing environmental, social, economic, and ethical considerations. Here are some key reasons why sustainable solutions are crucial:
+            Environmental Preservation: Sustainable solutions reduce pollution, conserve resources, and protect ecosystems, promoting long-term environmental health.
+  <br> <br>
+  <strong>1.Resource Conservation:</strong> Sustainable practices ensure responsible resource use, including recycling, renewable energy adoption, and efficient resource management.
+  <br> <br>
+  <strong>2.Climate Change Mitigation:</strong> Sustainable approaches focus on reducing carbon emissions, embracing renewable energy, and combating the impacts of climate change.
+  <br> <br>
+ <strong> 3.Social Equity and Justice:</strong> Sustainable solutions prioritize fairness, addressing social inequalities, and ensuring equitable distribution of economic and environmental benefits.
+  <br> <br>
+  <strong>4.Economic Viability:</strong> Long-term economic benefits arise from investing in sustainable industries, creating jobs, stimulating innovation, and adapting to changing consumer preferences.
+          </p>
+          
+        </div>
+      </div>
+
+
+
+      <div class="container quote">
+        <p>
+          "In the quest for a sustainable future, each decision is a vote for the world we want to live in." <br> 
+          <span>- Frances Beinecke</span>
+        </p>
+      </div>
+   
+    
+    <!-- ------------------------------------accordion -->
+
+    <div class = container-main>
+      <div class="accordion-head">
+        <span>How can we contribute ?</span>
+      </div>
+      <div class="accordion" id="accordionPanelsStayOpenExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                  <div class = "sections">
+                      <div class="content">
+                          <h1 >Waste Reduction Tips:<span><img src="./images/Tips_images/trash_can_svg.svg" alt=""></span></h1>
+                  <p>Offer a section with practical tips on waste reduction, recycling, and proper disposal methods. Include information on composting and reducing single-use plastics.</p>
+                      </div>
+                  </div>
+              </button>
+            </h2>
+            <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse">
+              <div class="accordion-body">
+                <!-- <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow. -->
+                <div class="sections">
+                  <div class="content">
+                      <div class="post">
+                          <div class="post-item ima">
+                              <img src="./images/Tips_images/im1.webp" alt="">
+                          </div>
+                          <div class="text">
+                              <div class="post-item head"><h2>1. BULK GOODS ARE THE ULTIMATE ECO FRIENDLY PRODUCTS</h2></div>
+                              <div class="post-contet"><p>Consider buying staples in bulk and storing them in reusable containers like mason jars or cloth bags. Because you can control the amount, you'll be able to get exactly what you need. And as an added bonus, you should notice a difference at the grocery store checkout, since pre-packaged goods tend to come with a higher price tag. To save even more, consider joining a food buying club (or start one)!</p></div>
+                          </div>
+                      </div>
+          
+                      <div class="post">
+                          <div class="post-item ima">
+                              <img src="./images/Tips_images/im2.webp" alt="">
+                          </div>
+                          <div class="text">
+                              <div class="post-item head"><h2>2. NO PLASTIC BOTTLES</h2></div>
+                              <div class="post-contet"><p>Approximately 40% of bottled water sold is actually tap water. Instead of falling for clever marketing, invest in a quality water filter and a sweet reusable water bottle. We love glass, but there are plenty of other sustainable options! And while you’re at it, grab a thermos for your coffee or tea on the go. You’ll be able to make it exactly the way you like it — and save money, too.</p></div>
+                          </div>
+                      </div>
+          
+                      <div class="post">
+                          <div class="post-item ima">
+                              <img src="./images/Tips_images/im3.webp" alt="">
+                          </div>
+                          <div class="text">
+                              <div class="post-item head"><h2>3. INVEST IN A SET OF CLOTH PRODUCE BAGS</h2></div>
+                              <div class="post-contet"><p>You know those flimsy plastic bags they offer in the produce department? Super wasteful. Investing in (and remembering to bring) a set of cloth produce bags will protect your purchases and prevent more plastic from ending up in the ocean. These bags are great for transporting bulk goods, too. Plus, your produce will never be cuter!</p></div>
+                          </div>
+                      </div>
+          
+                      <div class="post">
+                          <div class="post-item ima">
+                              <img src="./images/Tips_images/im4.webp" alt="">
+                          </div>
+                          <div class="text">
+                              <div class="post-item head"><h2>4. AVOID PRODUCE THAT'S WRAPPED IN PLASTIC</h2></div>
+                              <div class="post-contet"><p>This is a tough one, because many supermarkets go heavy on the shrink wrap, even those that naturally have biodegradable "packaging". Shrink-wrapped bananas, anyone? But, that brings us to our next tip!</p></div>
+                          </div>
+                      </div>
+          
+                      <div class="post">
+                          <div class="post-item ima">
+                              <img src="./images/Tips_images/im5.webp" alt="">
+                          </div>
+                          <div class="text">
+                              <div class="post-item head"><h2>5. COMPOST YOUR FOOD SCRAPS</h2></div>
+                              <div class="post-contet"><p>According to the Environmental Protection Agency, 30% of the waste Americans produce is made up of yard waste and food scraps, which can be composted instead. By diverting that waste away from the dump we can shrink the size of landfills and reduce methane production, a volatile greenhouse gas and major contributor to global warming. Getting started is easy. You can create your own compost heap or take advantage of your city’s compost pick-up service. </p></div>
+                          </div>
+                      </div>
+          
+                      <div class="post">
+                          <div class="post-item ima">
+                              <img src="./images/Tips_images/im6.webp" alt="">
+                          </div>
+                          <div class="text">
+                              <div class="post-item head"><h2>6. REPLACE YOUR SOAP BOTTLES WITH BARS</h2></div>
+                              <div class="post-contet"><p>Not that kind! Give plastic shampoo, conditioner, and soap bottles the boot. Bars are concentrated and last longer than bottled products, so you’ll save money, too. Or if you’re feeling ambitious, try handcrafting your own homemade beauty products</p></div>
+                          </div>
+                      </div>
+          
+                      <div class="post">
+                          <div class="post-item ima">
+                              <img src="./images/Tips_images/im7.webp" alt="">
+                          </div>
+                          <div class="text">
+                              <div class="post-item head"><h2>7. CHECK THE AIR FILTER IN YOUR CAR</h2></div>
+                              <div class="post-contet"><p>A dirty air filter can reduce your vehicle's fuel economy by up to 10%. Read your car’s user manual to figure out what type of filter you need, and how to change it out. And don’t be intimidated! This is a quick fix that anyone can do!</p></div>
+                          </div>
+                      </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+          </div>
+      
+
+      <!-- Item-2 -->
+       <div class="accordion-item">
+  <h2 class="accordion-header">
+    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="true" aria-controls="panelsStayOpen-collapseTwo">
+      <div class="sections">
+          <div class="content">
+              <h1>Green Transportation Options: <span><img src="./images/Tips_images/cycle_svg_tips.svg" alt="" style="height: 60px; margin-top: 8px;"></span></h1> 
+          <p>Provide information on eco-friendly transportation options such as electric vehicles, public transit, biking, and walking. Include route planning and emissions comparisons.</p>
+      
+          </div>
+          </div>
+    </button>
+  </h2>
+  <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+    <div class="accordion-body">
+      <div class="sections">
+          <div class="content">
+              <h2>About Green transportation </h2>
+              <p>Sustainable or Green transportation refers to low- and zero-emission, energy-efficient, and affordable modes of transport, including electric and alternative-fuel vehicles, as well as domestic fuels. </p>
+              <p>The benefits of sustainable transportation in the United States include:</p>
+              <ul>
+                  <li>Cost savings on fuel and vehicles</li>
+                  <li>Reduced carbon emissions from burning fossil fuels, resulting in less air pollution </li>
+                  <li>Job creation with increased vehicle and battery manufacturing and fuel production</li>
+                  <li>Improved accessibility to reliable, affordable transportation options for all Americans </li>
+                  <li>Enhanced energy security and independence with less reliance on foreign sources of materials and fuels.</li>
+              </ul>
+              <h2>Types of Sustainable Vehicles</h2>
+              <p>Fuel-efficient vehicles require less fuel to operate compared with older vehicles. They save fuel costs and emit fewer greenhouse gases. Save money on gas with Energy Saver tips to improve gas mileage and reduce fuel use, and use comparison tools on FuelEconomy.gov to find a fuel-efficient vehicle.</p>
+              <p>Hybrid electric vehicles, plug-in hybrid electric vehicles, and all-electric vehicles use electricity to improve vehicle efficiency. Visit the Alternative Fuels Data Center to learn more about the different types of vehicles.</p>
+              
+              <h2>Sustainable Fuels and Batteries</h2>
+              <p>Sustainable transportation options run on clean fuel, batteries, or both. Alternative fuels can be used in flexible-fuel and dual-fuel vehicles as well as vehicles with advanced technology, such as hybrid power systems and fuel cells. Alternative fuels help conserve fuel and reduce emissions. They include:</p>
+
+              <div class="post">
+                  <div class="text">
+                      <ul class = 'liste list-unstyled'>
+                          <li><h5>Biodiesel</h5></li>
+                          <li><h5>Electricity</h5></li>
+                          <li><h5>Ethanol</h5></li>
+                          <li><h5>Hydrogen</h5></li>
+                          <li><h5>Natural Gas</h5></li>
+                          <li><h5>Propane</h5></li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+            </div>
+
+            <div class="view-more">
+              <span>For more such helping tips : <a href="./Extra_files/Tips.html" target="_blank">Click Here !! </a></span>
+            </div>
+            </div>
+
+            <!-- ----------------------------------------NEws section -->
+
+            <h1>Related Articles</h1>
+            <section class="news-list">
+                <div class="news" >
+                    <div>
+                        <img src="./images/Article_images/news1.jpg" alt="news 1">
+                    </div>
+                    <div>
+                        <h2 class="titles">A LETTER OF GREAT NEWS</h2>
+                        <p><span><i class="fas fa-calendar"></i>January 19, 2022</span><br>
+                            Writing an open letter in the beginning of the year 2022 can almost be a non-starter, especially</p>
+                         <button><a href="https://www.greenpeace.org/india/en/story/12888/a-letter-of-great-news/" style="color: white;">Read More</a></button>
+    
+                    </div>
+                </div>
+                <div class="news">
+                    <img src="./images/Article_images/news2.jpg" alt="news 1">
+                    <h2 class="titles">NCAP must have sectoral targets & interim milestones; says Greenpeace India</h2>
+                    <p><span>December 15, 2018</span><br>
+    
+                        NCAP announcement will be a big achievement since not a single monitored location in the country</p>
+                    <button><a href="https://www.greenpeace.org/india/en/story/3262/ncap-must-have-sectoral-targets-says-greenpeace-india/" style="color: white;">Read More</a></button>
+                </div>
+                <div class="news">
+                    <img src="./images/Article_images/news3.png" alt="news 1">
+                    <h2 class="titles">You cannot muzzle dissent in a democracy</h2>
+                    <p><span>December 11, 2018 </span><br>
+    
+    
+                        10th December 2018 marked 70 years since United Nation’s Universal Declaration of Human</p>
+                    <button><a href="https://www.greenpeace.org/india/en/story/3224/you-cannot-muzzle-dissent-in-a-democracy/" style="color: white;">Read More</a></button>
+                </div>
+                <div class="news">
+                    <img src="./images/Article_images/news4.jpg" alt="news 1">
+                    <h2 class="titles">Analysis on Khurja supercritical thermal power plant proves solar will be a</h2>
+                    <p><span>December 13, 2018</span><br>
+    
+                        New Delhi| December 13, 2018 | New coal power plants in regions such as Uttar Pradesh, in close proximity... </p>
+                    <button><a href="https://www.greenpeace.org/india/en/story/3255/analysis-on-khurja-supercritical-thermal-power-plant-proves-solar-will-be-a-better-investment/" style="color: white;">Read More</a></button>
+                </div>
+    
+    
+    
+                <div class="news">
+                    <img src="./images/Article_images/news6.png" alt="news 1">
+                    <h2 class="titles">Breaking Renewable Energy myths</h2>
+                    <p><span>November 5, 2018</span><br>
+    
+                        There are two sides to every story; of a protagonist and an antagonist. In the real world, differentiating</p>
+                    <button><a href="https://www.greenpeace.org/india/en/story/2177/breaking-renewable-energy-myths/" style="color: white;">Read More</a></button>
+                </div>
+    
+                <div class="news">
+                    <img src="./images/Article_images/news7.jpg" alt="news 1">
+                    <h2 class="titles">How Net Metered Solar Pumps will bring Farmer Shakti</h2>
+                    <p><span>October 16, 2018</span><br>
+    
+                        In simple words, net metering means being able to send back electricity to the electricity boards </p>
+                    <button><a href="https://www.greenpeace.org/india/en/story/2113/how-net-metered-solar-pumps-will-bring-farmer-shakti/" style="color: white;">Read More</a></button>
+                </div>
+                <div class="news">
+                    <img src="./images/Article_images/news8.jpg" alt="news 1">
+                    <h2 class="titles">Our Date With The Planet</h2>
+                    <p><span>July 31, 2018  </span><br>
+    
+                        The Earth Overshoot Day marks the date when we (all of humanity) have used more from nature than our </p>
+                    <button><a href="https://www.greenpeace.org/india/en/story/1663/our-date-with-the-planet/" style="color: white;">Read More</a></button>
+                </div>
+                <div class="news">
+                    <img src="./images/Article_images/news9.jpg" alt="news 1">
+                    <h2 class="titles">Make Your Own Black Gold</h2>
+                    <p><span>September 18, 2017</span><br>
+    
+                        Do you yearn for the fragrance of the forest or miss petrichor wafting through your window after the first... </p>
+                    <button><a href="https://www.greenpeace.org/india/en/story/1188/make-your-own-black-gold/" style="color: white;">Read More</a></button>
+                </div>
+                <div class="news">
+                  <img src="./images/Article_images/news10.jpg" alt="Product 1">
+                  <h2 class="titles">Stubble Burning and Neo-liberal absurdity</h2>
+                  <p><span>October 31, 2018</span><br>
+  
+                      Mandeep, 23, completed his graduation in political science from Punjab University in 2015 before he... </p>
+                  <button><a href="https://www.greenpeace.org/india/en/story/2160/stubble-burning-and-neo-liberal-absurdity/" style="color: white;">Read More</a></button>
+              </div>
+  
+              <div class="news">
+                  <img src="./images/Article_images/news11.jpg" alt="Product 1">
+                  <h2 class="titles">How Solar Water Pumps Can Revolutionise India's Farm Sector</h2>
+                  <p><span>October 10, 2018</span><br>
+  
+                      For a long time, solar water pumps were considered to be standalone systems  to be deployed in places </p>
+                  <button><a href="https://www.greenpeace.org/india/en/story/2014/how-solar-water-pumps-can-revolutionise-indias-farm-sector/" style="color: white;">Read More</a></button>
+              </div>
+              <div class="news">
+                  <img src="./images/Article_images/news12.png" alt="Product 1">
+                  <h2 class="titles">India’s Most Polluted City, Kanpur, Not Ready With Clean Air Action Plan</h2>
+                  <p><span>October 10, 2018</span><br>
+  
+                      Only 4 Out of 15 Uttar Pradesh Non-attainment cities prepared with Action Plan to tackle Air Pollution-... </p>
+                  <button><a href="https://www.greenpeace.org/india/en/story/1865/indias-most-polluted-city-kanpur-not-ready-with-clean-air-action-plan/" style="color: white;">Read More</a></button>
+              </div>
+  
+              <div class="news">
+                  <img src="./images/Article_images/news13.jpg" alt="Product 1">
+                  <h2 class="titles">A Call From The Deep Blue</h2>
+                  <p><span>April 24, 2017</span><br>
+  
+                      Take a deep breath. Every second breath you take comes from the oceans. Oceans cover over 70 </p>
+                  <button><a href="https://www.greenpeace.org/india/en/story/1534/a-call-from-the-deep-blue/" style="color: white;">Read More</a></button>
+              </div>
+            
+              
+            </section>
+
+            <div id="load-more"><button class="btn btn-primary">Load More News</button></div>
+
+        <script>
+            let loadMoreBtn=document.querySelector("#load-more");
+            let currentItem=4;
+
+            loadMoreBtn.onclick=()=>{
+                let boxes=[...document.querySelectorAll('.news-list .news')];
+
+                for(var i=currentItem;i<currentItem + 8;i++){
+                    boxes[i].style.display='inline-block';
+                }
+                currentItem+=8;
+
+                if(currentItem >= boxes.length){
+                    loadMoreBtn.style.display='none';
+                }
+            }
+        </script>
+
+
+            <!-- ----------------------------------------product section -->
+
+            <div class="container product-heading">
+              Here Are Some Coupon Codes For Popular Sustainable Products : 
+            </div>
+            <section class="products">
+              <div class="product-cards">
+                <div class="row">
+                  <div class="col col-sm-6 col-md-4">
+                    <div class="card">
+                      <img
+                        src="./images/Product_images/jeffersonshoe.jpg"
+                        alt="Shoe"
+                        style="width: 100%; height: 300px"
+                      />
+                      <h1>Biodegradable Jefferson shoes</h1>
+                      <span
+                        ><strong style="margin-right: 10px">Link to Buy : </strong>
+                        <a
+                          class="brand-link"
+                          href="https://www.nativeshoes.com/jefferson/111001004201.html?cgid=mens&idx=5"
+                          target="_blank"
+                          >NATIVE SHOES</a
+                        ></span
+                      >
+                      <i class="coupon_code">NATIVE2024</i>
+        
+                      <p>
+                        <button class="couponBtn" onclick="getCoupon(this)">
+                          Show coupon
+                        </button>
+                      </p>
+                    </div>
+                  </div>
+        
+                  <div class="col col-sm-6 col-md-4">
+                    <div class="card">
+                      <img
+                        src="./images/Product_images/BambooBottle.webp"
+                        alt="Bamboo"
+                        style="width: 100%; height: 300px"
+                      />
+                      <h1>Bamboo Water Bottle</h1>
+                      <span
+                        ><strong style="margin-right: 10px">Link to Buy : </strong>
+                        <a
+                          class="brand-link"
+                          href="https://bambooindia.com/products/bamboo-water-bottle"
+                          target="_blank"
+                          >Bamboo India</a
+                        ></span
+                      >
+                      <i class="coupon_code">BAMBOO2024</i>
+        
+                      <p>
+                        <button class="couponBtn" onclick="getCoupon(this)">
+                          Show coupon
+                        </button>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+            </section>
+
+            <div class="explore-btn">
+              <button class="btn btn-success">
+                <a
+                  href="./Extra_files/Product_main.html"
+                  target="_blank"
+                  style="text-decoration: none; color: white"
+                  >For more such Products , Click Here !!</a
+                >
+              </button>
+            </div>
+        
+
+          </div>
+
+          <div class="third-section">
+
+          </div>
+
+
+    <!-- Brands Section -->
+
+    <section class="brands-section">
+        <h2 class="brand-title text-center ">Popular Sustainable Brands</h2>
+        <div class="container">
+        <div class="brand">
+          <img src="./images/Extra_images/mixmitti.jpeg" alt="Brand 1 Logo" />
+        </div>
+        <div class="brand">
+          <img src="./images/Extra_images/native_brand_logo.png" alt="Brand 2 Logo" />
+        </div>
+        <div class="brand">
+          <img src="./images/Extra_images/green_toy_brand_logo.png" alt="Brand 3 Logo" />
+        </div>
+        <div class="brand">
+          <img src="./images/Extra_images/bamboo-india.png" alt="Brand 4 Logo" />
+        </div>
+        <!-- <div class="brand">
+          <img src="mixmitti.jpeg" alt="Brand 5 Logo" />
+        </div>
+        <div class="brand">
+          <img src="mixmitti.jpeg" alt="Brand 6 Logo" />
+        </div>
+        <div class="brand">
+          <img src="mixmitti.jpeg" alt="Brand 7 Logo" /> -->
+        </div>
+        <!-- Add more brand divs as needed -->
+      </div>
+       <!-- <p class="tagline">Proudly manufacturing sustainable products for a better environment.</p> -->
+    </section>
+
+    <!-- Navbar Section -->
+    <!-- Tagline image -->
+    <!-- Brands -->
+    <!-- No. of peoples joined  -->
+    <!-- Footer -->
+
+
+    <!------------------------------------------------- FOOTER -->
+    <hr style="height: 3px; background-color: #2b2a2a;">
+    <div class="footer bg-success">
+      <footer class="py-3 my-4">
+        <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Home</a></li>
+          <!-- <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary"></a></li> -->
+          <li class="nav-item"><a href="./Extra_files/Product_main.html" target="_blank" class="nav-link px-2 text-body-secondary">Shop</a></li>
+          <li class="nav-item"><a href="./Extra_files/Contact_us.html" target="_blank" class="nav-link px-2 text-body-secondary">Contact Us</a></li>
+          <li class="nav-item"><a href="./Extra_files/About.html" target="_blank" class="nav-link px-2 text-body-secondary">About</a></li>
+        </ul>
+        <p class="text-center text-body-secondary">© 2024 Company, Inc</p>
+      </footer>
+    </div>
+
+    <script>
+      function getCoupon(button) {
+      // Get the parent card element
+      var card = button.closest(".card");
+      // Find the coupon text element within the card
+      var couponText = card.querySelector(".coupon_code");
+      button.innerHTML = couponText.innerHTML;
+
+      button.style.pointerEvents = "none";
+    }
+    </script>
+  </body>
+</html>
